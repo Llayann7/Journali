@@ -1,5 +1,5 @@
 import SwiftUI
-
+//
 struct JournalListView: View {
     private let journals = Journal.samples
     @State private var searchText = ""
