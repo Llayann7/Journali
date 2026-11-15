@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct MyApp: App {
@@ -16,6 +17,7 @@ struct MyApp: App {
                 }
             }
             .preferredColorScheme(.dark)
+            .tint(Theme.primaryAccent)
             .task {
                 try? await Task.sleep(for: .seconds(2))
                 withAnimation(.easeInOut(duration: 0.5)) {
@@ -23,5 +25,6 @@ struct MyApp: App {
                 }
             }
         }
+        .modelContainer(for: Journal.self)
     }
 }
